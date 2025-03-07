@@ -6,7 +6,7 @@
   };
 
   outputs = { self, nixpkgs }: {
-    templates = {
+    templates.default = {
       devShells.x86_64-linux.default = let 
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
       in 
