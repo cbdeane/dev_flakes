@@ -7,6 +7,7 @@
       welcomeText = ''
         Initialized Node JS LTS 22 developer shell
       '';
+    };
   };
 }
 
