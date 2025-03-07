@@ -12,16 +12,6 @@
       pkgs.mkShell {
         packages = [ pkgs.nodejs_22 ];
       };
-    templates.default = {
-      nixosConfigurations = {
-      my-nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./nixos-config.nix
-        ];
-      };
-      };
-    };
   };
 }
 
