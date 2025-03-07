@@ -1,6 +1,3 @@
-
-  description = "Template to initialize a node js 22 LTS developer shell flake";
-
   outputs = { self }: {
 
     templates.default = {
