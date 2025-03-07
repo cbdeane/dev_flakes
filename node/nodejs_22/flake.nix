@@ -6,13 +6,21 @@
   };
 
   outputs = { self, nixpkgs }: {
+    devShells.x86_64-linux.default = let 
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    in 
+      pkgs.mkShell {
+        packages = [ pkgs.nodejs_22 ];
+      };
     templates.default = {
-      devShells.x86_64-linux.default = let 
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      in 
-        pkgs.mkShell {
-          packages = [ pkgs.nodejs_22 ];
-        };
+      nixosConfigurations = {
+      my-nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./nixos-config.nix
+        ];
+      };
+      };
     };
   };
 }
