@@ -1,3 +1,4 @@
+{
   outputs = { self }: {
 
     templates.default = {
