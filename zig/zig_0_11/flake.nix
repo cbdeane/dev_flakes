@@ -1,5 +1,5 @@
 {
-  description = "Developer shell flake for node js 22 LTS";
+  description = "Developer shell flake for zig 11 LTS";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11"; 
