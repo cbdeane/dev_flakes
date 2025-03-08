@@ -1,5 +1,5 @@
 {
-  description = "Developer shell flake for zig 12";
+  description = "Developer shell flake for zig 11 LTS";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11"; 
@@ -10,7 +10,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in 
       pkgs.mkShell {
-        packages = [ pkgs.zig_0_12 ];
+        packages = [ pkgs.zig_0_11 ];
       };
   };
 }
