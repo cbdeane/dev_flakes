@@ -1,5 +1,5 @@
 {
-  description = "Developer shell flake for node js 22 LTS";
+  description = "Developer shell flake for go 1.23 (supported for two releases)";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11"; 
@@ -10,7 +10,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in 
       pkgs.mkShell {
-        packages = [ pkgs.nodejs_22 ];
+        packages = [ pkgs.go_1_23];
       };
   };
 }
