@@ -2,10 +2,10 @@
   outputs = { self }: {
 
     templates.default = {
-      description = "Developer shell flake for Go 1.23";
-      path = ./go_1_23;
+      description = "Developer shell flake for rust";
+      path = ./rustc_cargo;
       welcomeText = ''
-        Initialized Go 1.23 developer shell
+        Initialized Rust developer shell
       '';
     };
   };
