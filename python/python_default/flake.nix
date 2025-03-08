@@ -1,5 +1,5 @@
 {
-  description = "Developer shell flake for Python development"
+  description = "Developer shell flake for Python development";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11"; 
@@ -10,7 +10,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in 
       pkgs.mkShell {
-        packages = [ pkgs.python pkgs.pipx];
+        packages = [ pkgs.python3 pkgs.pipx];
       };
   };
 }
