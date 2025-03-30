@@ -10,7 +10,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in 
       pkgs.mkShell {
-        packages = [ pkgs.go_1_23];
+        packages = [ pkgs.go_1_23 pkgs.compile-daemon];
       };
   };
 }
